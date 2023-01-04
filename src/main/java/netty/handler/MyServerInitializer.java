@@ -14,6 +14,7 @@ public class MyServerInitializer extends ChannelInitializer<SocketChannel> {
     protected void initChannel(SocketChannel ch) throws Exception {
         ch.pipeline()
                 .addLast(new ByteToLongDecoder())
+                .addLast(new LongToByteEncoder())
                 .addLast(new MyServerHandler());
     }
 }

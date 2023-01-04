@@ -13,7 +13,8 @@ public class MyClientHandler extends SimpleChannelInboundHandler<SocketChannel> 
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, SocketChannel msg) {
-
+        System.out.println("服务器的ip = " + ctx.channel().remoteAddress());
+        System.out.println("收到服务器消息 = " + msg);
     }
 
     @Override
